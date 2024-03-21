@@ -92,6 +92,11 @@ correlation_chart = go.Figure(
 )
 
 bar_chart = go.Figure(go.Bar(
-    labels=df.track_name,
-    values=df.streams
+    y=df.track_name,
+    x=df.streams,
+    orientation='h',
+    marker=dict(
+        color='rgba(58, 71, 80, 0.6)',
+        line=dict(color='rgba(58, 71, 80, 1.0)', width=3)
+    )
 ))
